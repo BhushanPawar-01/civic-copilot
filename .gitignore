@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Byte-compiled / optimized / DLL files
+backend/__pycache__/
+backend/agents/__pycache__/
+backend/api/__pycache__/
+backend/audit/__pycache__/
+backend/llm/__pycache__/
+backend/memory/__pycache__/
+backend/orchestrator/__pycache__/  
+backend/rag/__pycache__/
+backend/schemas/__pycache__/
+tests/__pycache__/
+
+# Logs
+tests/logs/
+backend/logs/

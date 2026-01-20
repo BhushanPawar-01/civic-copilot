@@ -1,0 +1,30 @@
+# Core backend
+fastapi
+uvicorn
+pydantic
+
+# Frontend
+streamlit
+
+# LLM + NLP
+transformers
+huggingface_hub
+sentence-transformers
+
+# Vector search
+faiss-cpu
+
+# Data handling
+numpy
+pandas
+
+# HTTP & async
+httpx
+aiofiles
+
+# Utilities
+python-dotenv
+loguru
+
+# Testing
+pytest
