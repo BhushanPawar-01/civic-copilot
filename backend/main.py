@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -9,12 +13,12 @@ from config import settings
 async def lifespan(app: FastAPI):
     # --- Startup Logic ---
     # This runs once when the server starts
-    print("🚀 Initializing Civic Copilot Agents...")
+    print("Initializing Civic Copilot Agents...")
     
     # Check if FAISS index exists
     import os
     if not os.path.exists(settings.FAISS_INDEX_PATH):
-        print(f"⚠️ WARNING: FAISS index not found at {settings.FAISS_INDEX_PATH}. "
+        print(f"WARNING: FAISS index not found at {settings.FAISS_INDEX_PATH}. "
               "Please run setup_data.py first.")
     
     yield  # The application runs while this is suspended
