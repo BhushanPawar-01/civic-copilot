@@ -18,11 +18,12 @@
 
 ---
 
+
 ## Features
 
 - **Modular AI Agents**: Intent, action, policy, and verification agents for flexible task orchestration.
 - **Retrieval-Augmented Generation (RAG)**: Integrates FAISS-based document retrieval for context-aware responses.
-- **Multi-LLM Support**: Easily switch between OpenAI, HuggingFace, and Gemini clients. (Currently only supports Hugging Face)
+- **Multi-LLM Support**: Hugging Face Inference API implemented. OpenAI and Gemini support are planned (not yet available).
 - **Session Management**: Persistent memory and summarization for user sessions.
 - **Audit Logging**: Traceable logs for transparency and debugging.
 - **Streamlit Frontend**: Simple, interactive UI for end users.
@@ -53,8 +54,10 @@ Response Builder → UI
 
 ---
 
+
 ### Detailed Request Lifecycle
 ![Civic Copilot Architecture](img/flowchart-civic-copilot.png)
+*Diagram location: `img/flowchart-civic-copilot.png`*
 
 ## Architecture Components (Deep Dive)
 
@@ -143,15 +146,17 @@ Each agent has **one responsibility** and communicates through typed schemas.
 
 ---
 
+
 ### 6. LLM Provider Abstraction
 
 All agents rely on a common `LLMClient` interface.
 
-Supported / planned providers:
+**Supported provider:**
+- Hugging Face Inference API (implemented)
 
-* Hugging Face Inference API (current)
-* OpenAI API (future)
-* Gemini API (future)
+**Planned providers:**
+- OpenAI API (future)
+- Gemini API (future)
 
 This prevents vendor lock-in and allows experimentation without agent rewrites.
 
@@ -209,11 +214,13 @@ This trace can be:
 	```
 4. **Run the backend server:**
 	```sh
-	uvicorn backend.main:app --reload
+	cd backend
+	uvicorn main:app --reload
 	```
 5. **Launch the frontend:**
 	```sh
-	streamlit run frontend/streamlit_app.py
+	cd frontend
+	streamlit run streamlit_app.py
 	```
 
 ---
@@ -276,6 +283,13 @@ Contributions are welcome! Please open issues or submit pull requests for improv
 
 ---
 
+
 ## Contact
 
-For questions or support, please contact [bhushanpawar01088@example.com](mailto:your-email@example.com).
+For questions or support, please contact [bhushanpawar0108@gmail.com](mailto:bhushanpawar0108@gmail.com).
+
+---
+
+## License
+
+This project is currently unlicensed. Please contact the maintainer for licensing information or before using in production.
