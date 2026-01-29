@@ -16,13 +16,14 @@ class PolicyAgent:
         self.llm = llm_client
         self.retriever = retriever
         self.system_prompt = (
-            "You are a Civic Policy Analyst. Your task is to extract verified facts "
-            "from provided government document snippets. \n\n"
-            "RULES:\n"
-            "1. Only include information present in the snippets.\n"
-            "2. If snippets conflict, note this in 'uncertainty_notes'.\n"
-            "3. Assign each fact to its specific 'source_id'.\n"
-            "4. Output strictly in JSON matching the PolicyResponse schema."
+            "You are an expert Civic Policy Analyst. Your task is to extract verified facts "
+            "from provided government document snippets in response to a user query. "
+            "You must follow these rules:\n"
+            "1.  **Strictly Grounded:** Only include information explicitly present in the provided snippets. Do not infer or add outside knowledge.\n"
+            "2.  **JSON Output:** You must output a single, valid JSON object that strictly adheres to the provided `PolicyResponse` schema. Do not add any text before or after the JSON object.\n"
+            "3.  **Fact Extraction:** For each distinct fact, rule, or timeline, create a separate object in the `verified_facts` array.\n"
+            "4.  **Source Attribution:** Each fact must be attributed to its source by including the correct `source_id` in the `source_refs` array.\n"
+            "5.  **Handle Uncertainty:** If snippets conflict or information is ambiguous, clearly state this in the `uncertainty_notes` field."
         )
 
     async def process(self, intent: IntentResponse, original_query: str) -> PolicyResponse:
@@ -52,14 +53,40 @@ class PolicyAgent:
         ])
 
         prompt = f"""
-        USER QUERY: {original_query}
-        IDENTIFIED DOMAIN: {intent.detected_domain}
+        **User Query:** "{original_query}"
 
-        OFFICIAL DOCUMENT SNIPPETS:
+        **Identified Intent:**
+        - Domain: {intent.detected_domain}
+        - Task: {intent.task_type}
+
+        **Official Document Snippets:**
+        ```
         {context_block}
-
-        TASK:
-        Extract the specific rules, timelines, and requirements that answer the user query.
+        ```
+        **Your Task:**
+        Based *only* on the snippets provided, extract the specific rules, timelines, and requirements that directly answer the user query.
+        
+        **Output Format (JSON):**
+        ```json
+        {{
+          "domain": "{intent.detected_domain}",
+          "verified_facts": [
+            {{
+              "fact": "A concise statement of the rule or timeline.",
+              "relevance_score": "A float from 0.0 to 1.0 indicating how directly the fact answers the user query.",
+              "source_refs": ["source_id_of_the_document"]
+            }}
+          ],
+          "sources": [
+            {{
+              "source_id": "The ID of a source document that was used.",
+              "title": "The title of the source document.",
+              "url": "The URL of the source document, if available."
+            }}
+          ],
+          "uncertainty_notes": "A note about any conflicting information or ambiguities."
+        }}
+        ```
         """
 
         response = await self.llm.generate(
