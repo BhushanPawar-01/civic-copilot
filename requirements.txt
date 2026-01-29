@@ -11,6 +11,10 @@ transformers
 huggingface_hub
 sentence-transformers
 
+# Raw data handling
+PyMuPDF
+markdownify
+
 # Vector search
 faiss-cpu
 
