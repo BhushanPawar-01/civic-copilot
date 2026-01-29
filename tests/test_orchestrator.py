@@ -12,7 +12,7 @@ from rag.retriever import CivicRetriever
 from config import settings
 
 async def test_full_workflow():
-    print("🚀 Testing Full Orchestrator Workflow...")
+    print("Testing Full Orchestrator Workflow...")
     
     # Setup dependencies
     llm = HFClient()
@@ -26,16 +26,16 @@ async def test_full_workflow():
     session_id = "test_user_001"
     query = "How long does passport processing take?"
     
-    print(f"\n🏃 Running workflow for: '{query}'")
+    print(f"\nRunning workflow for: '{query}'")
     
     try:
         response = await orchestrator.run_workflow(query, session_id)
-        print("\n✨ FINAL RESPONSE:")
+        print("\nFINAL RESPONSE:")
         print(f"Text: {response.answer_text}")
         print(f"Verified: {response.is_verified}")
         print(f"Trace ID: {response.trace_id}")
     except Exception as e:
-        print(f"\n💥 Workflow Crashed: {e}")
+        print(f"\n Workflow Crashed: {e}")
 
 if __name__ == "__main__":
     asyncio.run(test_full_workflow())
