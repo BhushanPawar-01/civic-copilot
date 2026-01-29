@@ -1,0 +1,156 @@
+[
+  {
+    "id": "advisory.pdf",
+    "title": "Advisory",
+    "url": "https://passportindia.gov.in/AppOnlineProject/pdf/Advisory.pdf",
+    "local_path": "data/raw/passport/advisories/Advisory.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "cpgrams.md",
+    "title": "CPGRAMS",
+    "url": "https://pgportal.gov.in/",
+    "local_path": "data/raw/passport/escalation/CPGRAMS.md",
+    "domain": "passport"
+  },
+  {
+    "id": "grievance-direct-public-interface.md",
+    "title": "Grievance Direct Public Interface",
+    "url": "https://www.passportindia.gov.in/psp/AccessInformation",
+    "local_path": "data/raw/passport/escalation/Grevience Direct Public Interface.md",
+    "domain": "passport"
+  },
+  {
+    "id": "grievance-enquiry-and-information.md",
+    "title": "Grievance Enquiry and Information",
+    "url": "https://www.passportindia.gov.in/psp/AccessInformation",
+    "local_path": "data/raw/passport/escalation/Grevience Enqiure and Information.md",
+    "domain": "passport"
+  },
+  {
+    "id": "grievance-passport.md",
+    "title": "Grievance Passport",
+    "url": "https://www.passportindia.gov.in/psp/AccessInformation",
+    "local_path": "data/raw/passport/escalation/Grevience Passport.md",
+    "domain": "passport"
+  },
+  {
+    "id": "revision-of-fee-for-passport-related-services.pdf",
+    "title": "Revision of fee for passport related services",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/GSR_731_dtd_28.09.2012.pdf",
+    "local_path": "data/raw/passport/fees/Revision of fee for passport related services.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "issue-of-passport-during-pendency-of-criminal-case.pdf",
+    "title": "Issue of passport during pendency of criminal case",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/GSR_570_dtd.pdf",
+    "local_path": "data/raw/passport/normative/Issue of passport during pendency of criminal case.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "latest-passport-manual-for-disclosure-under-rti-act.pdf",
+    "title": "Latest Passport Manual for disclosure under RTI Act",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/Latest_Passport_Manual_for_disclosure_under_RTI_Act.pdf",
+    "local_path": "data/raw/passport/normative/Latest Passport Manual for disclosure under RTI Act.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "passport-act-1967.pdf",
+    "title": "Passport Act 1967",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/PassportActEng.pdf",
+    "local_path": "data/raw/passport/normative/Passport Act 1967.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "passport-amendment-rule-2011.pdf",
+    "title": "Passport Amendment Rule 2011",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/GSR_633_dt_23.08.2011.pdf",
+    "local_path": "data/raw/passport/normative/Passport Amendment Rule 2011.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "passport-rules-1980.pdf",
+    "title": "Passport Rules 1980",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/Passport_Rules_1980.pdf",
+    "local_path": "data/raw/passport/normative/Passport Rules 1980.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "sanction-for-prosecution-under-passport-act.pdf",
+    "title": "Sanction for prosecution under passport act",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/GSR_662_dtd_01.12.1979.pdf",
+    "local_path": "data/raw/passport/normative/sanction for prosecution under paspport act.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "strengthening-of-machinery-for-redressal-of-public-grievance-cpgrams.pdf",
+    "title": "Strengthening of Machinery for Redressal of Public Grievance CPGRAMS",
+    "url": "https://pgportal.gov.in/Home/Preview/U3RyZW5ndGhlbmluZ29mTWFjaGluZXJ5Zm9yUmVkcmVzc2Fsb2ZQdWJsaWNHcmlldmFuY2VDUEdSQU1TLnBkZg%3d%3d",
+    "local_path": "data/raw/passport/normative/Strengthening of Machinery for Redressal of Public Grievance CPGRAMS.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "application-form-instruction-booklet-v3.0.pdf",
+    "title": "Application form Instruction Booklet-V3.0",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/ApplicationformInstructionBooklet-V3.0.pdf",
+    "local_path": "data/raw/passport/procedural/Application form Instruction Booklet-V3.0.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "comprehensive-guidelines-for-handling-the-public-grievances.pdf",
+    "title": "Comprehensive Guidelines For Handling The Public Grievances",
+    "url": "https://pgportal.gov.in/Home/Preview/Q29tcHJlaGVuc2l2ZUd1aWRlbGluZXNGb3JIYW5kbGluZ1RoZVB1YmxpY0dyaWV2YW5jZXMucGRm",
+    "local_path": "data/raw/passport/procedural/Comprehensive Guidelines For Handling The Public Grievances.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "police-verification-process.md",
+    "title": "Police verfication process",
+    "url": "https://services1.passportindia.gov.in/psp/ApplyPCC",
+    "local_path": "data/raw/passport/procedural/Police verfication process.md",
+    "domain": "passport"
+  },
+  {
+    "id": "tatkal-application-process.md",
+    "title": "Tatkal application process",
+    "url": "https://services1.passportindia.gov.in/psp/TatkaalPassports",
+    "local_path": "data/raw/passport/procedural/Tatkal application process.md",
+    "domain": "passport"
+  },
+  {
+    "id": "document-required-for-non-ecr.md",
+    "title": "Document Required for Non-ECR",
+    "url": "https://services1.passportindia.gov.in/psp/onlineHtml/NonEcrDocuments",
+    "local_path": "data/raw/passport/requirements/Document Required for Non-ECR.md",
+    "domain": "passport"
+  },
+  {
+    "id": "revised-document-for-proof-of-dob-2025.pdf",
+    "title": "Revised document for proof of DOB 2025",
+    "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/Gazette_Notification_DoB.pdf",
+    "local_path": "data/raw/passport/requirements/Revised document for proof of DOB 2025.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "citizen-charter-2025.pdf",
+    "title": "Citizen Charter 2025",
+    "url": "https://services1.passportindia.gov.in/AppOnlineProject/pdf/Citizen_Charter.pdf",
+    "local_path": "data/raw/passport/sla/Citizen Charter 2025.pdf",
+    "domain": "passport"
+  },
+  {
+    "id": "tatkal-faq.md",
+    "title": "Tatkal faq",
+    "url": "https://services1.passportindia.gov.in/psp/FaqTatkaalPassports",
+    "local_path": "data/raw/passport/tatkal/Tatkal faq.md",
+    "domain": "passport"
+  },
+  {
+    "id": "tatkal-opening-time.md",
+    "title": "Tatkal opening time",
+    "url": "https://www.passportindia.gov.in/psp/Appointment",
+    "local_path": "data/raw/passport/tatkal/Tatkal opening time.md",
+    "domain": "passport"
+  }
+]
