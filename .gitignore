@@ -23,7 +23,8 @@ tests/__pycache__/
 # Distribution / packaging
 .Python
 
-
+# Raw data files
+data/raw/
 
 # Logs
 tests/logs/
