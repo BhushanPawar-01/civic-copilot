@@ -2,6 +2,9 @@
 .env
 
 # Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 backend/__pycache__/
 backend/agents/__pycache__/
 backend/api/__pycache__/
@@ -11,7 +14,16 @@ backend/memory/__pycache__/
 backend/orchestrator/__pycache__/  
 backend/rag/__pycache__/
 backend/schemas/__pycache__/
+frontend/__pycache__/
 tests/__pycache__/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+
+
 
 # Logs
 tests/logs/
