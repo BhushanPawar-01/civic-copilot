@@ -14,6 +14,9 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: Optional[str] = Field(default=None, env="GEMINI_API_KEY")
     OPENAI_API_KEY: Optional[str] = Field(default=None, env="OPENAI_API_KEY")
     
+    # LLM Provider
+    LLM_PROVIDER: str = Field(default="hf", env="LLM_PROVIDER") # "hf", "gemini", or "openai"
+    
     # Paths
     BASE_DIR: str = os.path.dirname(os.path.abspath(__file__))
     DATA_DIR: str = os.path.join(BASE_DIR, "../data")
@@ -62,3 +65,12 @@ def validate_gemini_key():
             "or in your .env file for local development."
         )
     return settings.GEMINI_API_KEY
+
+def validate_openai_key():
+    """Check if OpenAI API key is available."""
+    if not settings.OPENAI_API_KEY:
+        raise ValueError(
+            "OPENAI_API_KEY not found. Please set it in Hugging Face Space Secrets "
+            "or in your .env file for local development."
+        )
+    return settings.OPENAI_API_KEY
