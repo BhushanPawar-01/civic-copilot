@@ -1,13 +1,17 @@
 from huggingface_hub import InferenceClient
 from .base import LLMClient, LLMResponse
-from config import settings
+from config import settings, validate_hf_token
 from typing import Optional
 
 class HFClient(LLMClient):
     def __init__(self, model_id: str = "meta-llama/Meta-Llama-3-8B-Instruct"):
         self.model_id = model_id
+        
+        # Validate token at initialization
+        token = validate_hf_token()
+        
         # The SDK reads the token and handles headers internally
-        self.client = InferenceClient(model=model_id, token=settings.HF_TOKEN)
+        self.client = InferenceClient(model=model_id, token=token)
 
     async def generate(self, prompt: str, system_prompt: Optional[str] = None, **kwargs) -> LLMResponse:
         messages = []
@@ -18,8 +22,8 @@ class HFClient(LLMClient):
         # Using the OpenAI-compatible chat interface
         completion = self.client.chat.completions.create(
             messages=messages,
-            max_tokens=kwargs.get("max_tokens", 1024),
-            temperature=kwargs.get("temperature", 0.7),
+            max_tokens=kwargs.get("max_tokens", settings.DEFAULT_MAX_TOKENS),
+            temperature=kwargs.get("temperature", settings.DEFAULT_TEMPERATURE),
             stream=False
         )
 

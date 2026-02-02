@@ -17,6 +17,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy entire project
 COPY . .
 
+# Create .env file with defaults (HuggingFace Spaces compatible)
+RUN echo 'ENVIRONMENT=production\n\
+LOG_LEVEL=INFO\n\
+BACKEND_PORT=8000\n\
+FRONTEND_PORT=8501' > .env
+
 # Make startup script executable
 RUN chmod +x start.sh
 

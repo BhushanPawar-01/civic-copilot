@@ -1,10 +1,14 @@
 import google.generativeai as genai
 from .base import LLMClient, LLMResponse
-from config import settings
+from config import settings, validate_gemini_key
+from typing import Optional
 
 class GeminiClient(LLMClient):
-    def __init__(self, model_name: str = "gemini-2.5-flash"):
-        genai.configure(api_key=settings.GEMINI_API_KEY)
+    def __init__(self, model_name: str = "gemini-2.0-flash-exp"):
+        # Validate API key at initialization
+        api_key = validate_gemini_key()
+        
+        genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel(model_name)
         self.model_name = model_name
 
@@ -14,8 +18,8 @@ class GeminiClient(LLMClient):
         response = await self.model.generate_content_async(
             full_prompt,
             generation_config=genai.types.GenerationConfig(
-                max_output_tokens=kwargs.get("max_tokens", 1024),
-                temperature=kwargs.get("temperature", 0.7),
+                max_output_tokens=kwargs.get("max_tokens", settings.DEFAULT_MAX_TOKENS),
+                temperature=kwargs.get("temperature", settings.DEFAULT_TEMPERATURE),
             )
         )
         
