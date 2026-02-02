@@ -12,7 +12,7 @@ transformers
 huggingface_hub
 sentence-transformers
 openai
-google-generativeai
+google-genai
 
 # Raw data handling
 PyMuPDF

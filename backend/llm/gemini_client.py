@@ -1,10 +1,10 @@
-import google.generativeai as genai
+import google.genai as genai
 from .base import LLMClient, LLMResponse
 from config import settings, validate_gemini_key
 from typing import Optional
 
 class GeminiClient(LLMClient):
-    def __init__(self, model_name: str = "gemini-2.0-flash-exp"):
+    def __init__(self, model_name: str = "gemini-1.5-flash"):
         # Validate API key at initialization
         api_key = validate_gemini_key()
         
